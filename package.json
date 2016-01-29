@@ -1,11 +1,22 @@
 {
   "name": "tf2stadium-test-client",
   "version": "0.0.1",
-  "description": "Black box testing client for TF2Stadium",
-  "main": "index.js",
+  "description": "E2E testing client for TF2Stadium",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "protractor protractor.conf.js",
+    "clean": "rm -rf screenshots"
   },
-  "author": "gpittarelli",
-  "license": "MIT"
+  "author": {
+    "name": "gpittarelli",
+    "email": "tf2stadium@gpittarelli.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "protractor": "^3.0.0",
+    "webdriver-manager": "^8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
 }
