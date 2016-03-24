@@ -44,25 +44,12 @@ describe('TF2Stadium', function () {
     takeScreenshot('add-lobby-fab-clicked');
   });
 
-  it('choosing a format should move to the map step', function (done) {
+  it('choosing a format should move to the map step', function () {
     getWizardOption('6s').then(function (el) {
+      takeScreenshot('pre-format-chosen');
       el.click();
-      takeScreenshot('post-format-chosen');
-      var i = 0;
-      browser.wait(function () {
-        takeScreenshot('post-format-chosen-' + ++i);
-        browser.getLocationAbsUrl().then(function (url) {
-          console.log(url);
-          return url.match(/\/create\/map$/) !== null;
-        });
-      }, 10000);
-
-      // EC.textToBePresentInElement($('.lobbypage-rules > span[ng-show="header.lobbyInformation.type"]'), '6s')
-
-//      expect().toMatch();
+      expect(browser.getLocationAbsUrl()).toMatch(/\/create\/map$/);
       takeScreenshot('post-format-chosen2');
-
-      done();
     });
   });
 });
