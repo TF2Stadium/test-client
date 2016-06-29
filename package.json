@@ -16,11 +16,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^1.2.0",
+    "dotenv": "^2.0.0",
     "protractor": "^3.0.0",
     "webdriver-manager": "^8.0.0"
   },
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "eslint": "^2.13.1"
   }
 }
