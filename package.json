@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "protractor protractor.conf.js",
-    "clean": "rm -rf screenshots"
+    "clean": "rm -rf screenshots",
+    "lint": "eslint --cache protractor.conf.js tests/**/*.js"
   },
   "author": {
     "name": "gpittarelli",
