@@ -16,16 +16,17 @@ First, install the dependencies with `npm install`
 Then, to run the client against a specific Frontend instance, you must
 specify the base URL like so:
 
-    npm start -- --baseUrl http://example.com:8080/
+    npm start -- --baseUrl http://example.com:3000/ --params.apiUrl http://localhost:8080/
 
-If not specified, `baseUrl` defaults to `http://localhost:3000/
+If not specified, `baseUrl` defaults to `http://localhost:3000/ and
+`params.apiUrl` defaults to `http://localhost:8080/`
 
 If running on a headless system, X virtual framebuffers may be needed,
 in which case the full command would look like:
 
-    xvfb-run npm start -- --baseUrl http://example.com:8080/
+    xvfb-run npm start -- --baseUrl http://example.com:8080/ --params.apiUrl http://localhost:8081/
 
-Additional parameters can be specified (Note: must be after the `--`).
+Additional, optional parameters can be specified (Note: must be after the `--`).
 
 | Flag                         | Description                                                                                     |
 |------------------------------|-------------------------------------------------------------------------------------------------|

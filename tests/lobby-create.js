@@ -1,7 +1,5 @@
 'use strict';
 
-var EC = protractor.ExpectedConditions;
-
 describe('TF2Stadium', function () {
   var addLobbyFab = $('div#fab > a');
   var lobbyCreateGrid = $$('#wizard > md-grid-tile');
@@ -32,8 +30,10 @@ describe('TF2Stadium', function () {
     return d.promise;
   }
 
-  beforeAll(function () {
-    browser.get('/');
+  beforeAll(function (done) {
+    login().then(function () {
+      return browser.get(browser.baseUrl);
+    }).then(done);
   });
 
   it('the add lobby fab should go to the lobby create page', function () {

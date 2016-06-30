@@ -1,8 +1,6 @@
 'use strict';
 
 describe('TF2Stadium', function () {
-  var addLobbyFab = $('div#fab > a');
-
   beforeAll(function () {
     browser.get('/');
   });

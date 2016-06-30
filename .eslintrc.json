@@ -35,7 +35,8 @@
     "protractor": true
   },
   "globals": {
-    "takeScreenshot": false
+    "takeScreenshot": false,
+    "login": false
   },
   "extends": "eslint:recommended"
 }
