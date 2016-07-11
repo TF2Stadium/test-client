@@ -27,7 +27,8 @@
     "request": "^2.72.0",
     "request-promise": "^3.0.0",
     "tough-cookie": "^2.2.2",
-    "webdriver-manager": "^10.2.1"
+    "webdriver-manager": "^10.2.1",
+    "visualreview-protractor": "^0.2.0"
   },
   "devDependencies": {
     "eslint": "^2.13.1"
