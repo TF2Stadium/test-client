@@ -2,6 +2,8 @@
 
 'use strict';
 
+require('babel-register');
+
 var Cookie = require('tough-cookie');
 var request = require('request-promise');
 var fs = require('fs');
