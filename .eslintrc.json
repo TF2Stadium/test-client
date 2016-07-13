@@ -3,7 +3,6 @@
     "no-console": 0,
     "no-trailing-spaces": 2,
     "eqeqeq": 2,
-    "strict": [2, "global"],
     "no-shadow": 2,
     "space-before-function-paren": [
       2,
@@ -30,6 +29,7 @@
     ]
   },
   "env": {
+    "es6": true,
     "node": true,
     "jasmine": true,
     "protractor": true

@@ -2,6 +2,9 @@
 
 'use strict';
 
+require('babel-register');
+require('babel-polyfill');
+
 var Cookie = require('tough-cookie');
 var request = require('request-promise');
 var fs = require('fs');
@@ -50,7 +53,8 @@ exports.config = {
   framework: 'jasmine',
 
   baseUrl: 'http://localhost:8080/',
-  directConnect: true,
+// disable, see if it works again with next protractor version
+//  directConnect: true,
 
   specs: ['tests/**.js'],
   capabilities: {
