@@ -30,6 +30,7 @@
     "webdriver-manager": "^10.2.1"
   },
   "devDependencies": {
-    "eslint": "^2.13.1"
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.0.1"
   }
 }

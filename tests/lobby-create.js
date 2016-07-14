@@ -8,7 +8,7 @@ describe('TF2Stadium', function () {
     lobbyCreateGrid.then(function (tiles) {
       Promise.all(
         tiles.map(function (tile) {
-          return new Promise((resolve, reject) => {
+          return new Promise(resolve => {
             tile.$('.title').getText()
               .then(t => resolve({el: tile, text: t}));
           });
