@@ -39,11 +39,10 @@ describe('TF2Stadium', function () {
   });
 
   it('choosing a format should move to the map step', function () {
-    getWizardOption('6s').then(function (el) {
-      takeScreenshot('pre-format-chosen');
-      el.click();
-      expect(browser.getLocationAbsUrl()).toMatch(/\/create\/map$/);
-      takeScreenshot('post-format-chosen2');
-    });
+    let el = await getWizardOption('6s');
+    takeScreenshot('pre-format-chosen');
+    el.click();
+    expect(browser.getLocationAbsUrl()).toMatch(/\/create\/map$/);
+    takeScreenshot('post-format-chosen2');
   });
 });
