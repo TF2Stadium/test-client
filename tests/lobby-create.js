@@ -1,36 +1,32 @@
-describe('TF2Stadium', function () {
+describe('TF2Stadium', () => {
   var addLobbyFab = $('div#fab > a');
   var lobbyCreateGrid = $$('#wizard > md-grid-tile');
 
   function getWizardOption(title) {
     var d = protractor.promise.defer();
 
-    lobbyCreateGrid.then(function (tiles) {
+    lobbyCreateGrid.then(tiles => {
       Promise.all(
-        tiles.map(function (tile) {
+        tiles.map(tile => {
           return new Promise(resolve => {
             tile.$('.title').getText()
               .then(t => resolve({el: tile, text: t}));
           });
         })
-      ).then(function (els) {
-        d.fulfill(els.filter(function (o) {
-          return o.text === title;
-        })[0].el);
-      }, function () {
-        d.reject();
-      });
+      ).then(els => {
+        d.fulfill(els.filter(o => o.text === title)[0].el);
+      }, () => d.reject());
     });
 
     return d.promise;
   }
 
-  beforeAll(async function (done) {
+  beforeAll(async done => {
     await login();
     done(browser.get(browser.baseUrl));
   });
 
-  it('the add lobby fab should go to the lobby create page', function () {
+  it('the add lobby fab should go to the lobby create page', async () => {
     expect(addLobbyFab.isPresent()).toBe(true);
     addLobbyFab.click();
 
@@ -38,7 +34,7 @@ describe('TF2Stadium', function () {
     takeScreenshot('add-lobby-fab-clicked');
   });
 
-  it('choosing a format should move to the map step', function () {
+  it('choosing a format should move to the map step', async () => {
     let el = await getWizardOption('6s');
     takeScreenshot('pre-format-chosen');
     el.click();
