@@ -24,7 +24,7 @@
     "babel-register": "^6.9.0",
     "dotenv": "^2.0.0",
     "protractor": "^4.0.0",
-    "request": "^2.73.0",
+    "request": "2.74.0",
     "request-promise": "4.0.2",
     "tough-cookie": "2.3.0",
     "webdriver-manager": "^10.2.1"
